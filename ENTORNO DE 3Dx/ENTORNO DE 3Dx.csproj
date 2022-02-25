@@ -57,6 +57,7 @@
     <Compile Include="Control.cs" />
     <Compile Include="Figuras\Esfera.cs" />
     <Compile Include="Figuras\Figura.cs" />
+    <Compile Include="Figuras\Tubo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

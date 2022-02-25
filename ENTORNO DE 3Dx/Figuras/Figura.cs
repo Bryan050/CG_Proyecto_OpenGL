@@ -54,5 +54,9 @@ namespace ENTORNO_DE_3Dx.Figuras
         public virtual void DrawFigure() {
             
         }
+        public virtual void DrawFigure(float valor1)
+        {
+
+        }
     }
 }

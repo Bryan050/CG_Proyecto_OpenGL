@@ -18,6 +18,7 @@ namespace ENTORNO_DE_3Dx
         int op = -1;
         Control control;
         Figuras.Esfera es = new Figuras.Esfera();
+        Figuras.Tubo objTubo = new Figuras.Tubo();
         public FormMain()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace ENTORNO_DE_3Dx
         }
         void drawEjes()
         {
-            Gl.glLineWidth(20);
+            //Gl.glLineWidth(20);
             Gl.glBegin(Gl.GL_LINES);
             Gl.glColor3f(1.0f, 0.0f, 1.0f);   //Morado eje x
             Gl.glVertex3f(100, 0.0f, 0.0f);
@@ -81,6 +82,11 @@ namespace ENTORNO_DE_3Dx
                     {
                         es.DrawFigure();
                        // es = null;
+                        break;
+                    }
+                case 9:
+                    {
+                        objTubo.DrawFigure(5);
                         break;
                     }
             }
@@ -113,6 +119,7 @@ namespace ENTORNO_DE_3Dx
 
             //MessageBox.Show("cacaasdfasdf " + e.ToString());
             es.ChangeScale(TrkBScale.Value);
+            objTubo.ChangeScale(TrkBScale.Value);
             // control.SelectObject().ChangeScale((float)TrkBScale.Value);
             OpenGlControl.Refresh();
         }
